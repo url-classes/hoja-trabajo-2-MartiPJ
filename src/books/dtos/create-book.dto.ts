@@ -3,6 +3,7 @@ import{
     IsOptional,
     MaxLength,
     MinLength,
+    IsDate,
     
 } from 'class-validator';
 
@@ -16,7 +17,10 @@ export default class CreateBookDto{
     @MinLength(1)
     @MaxLength(255)
     gender: string;
-    
+
+    @IsDate()
+    @MinLength(1)
+    @MaxLength(255)
     yearpublication: Date;
 
 }

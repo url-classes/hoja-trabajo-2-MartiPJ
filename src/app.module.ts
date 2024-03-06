@@ -6,6 +6,8 @@ import Joi from 'joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BooksService } from './books/books.service';
 import { BooksModule } from './books/books.module';
+import { AuthorsService } from './authors/authors.service';
+import { AuthorsModule } from './authors/authors.module';
 
 @Module({
   imports: [
@@ -31,9 +33,10 @@ import { BooksModule } from './books/books.module';
       autoLoadEntities: true,
       synchronize: false,      
     }),
-    BooksModule
+    BooksModule,
+    AuthorsModule
   ],
   controllers: [AppController],
-  providers: [AppService, BooksService],
+  providers: [AppService, BooksService, AuthorsService],
 })
 export class AppModule {}
