@@ -10,17 +10,17 @@ import{
 export default class CreateBookDto{
     @IsString()
     @MinLength(1)
-    @MaxLength(255)
+    @MaxLength(44)
     title: string;
 
     @IsString()
     @MinLength(1)
     @MaxLength(255)
-    gender: string;
+    genres: string;
 
     @IsDate()
     @MinLength(1)
     @MaxLength(255)
-    yearpublication: Date;
+    published: Date;
 
 }

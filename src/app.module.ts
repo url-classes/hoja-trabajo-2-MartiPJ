@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import Joi from 'joi';
+import * as Joi from '@hapi/joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BooksService } from './books/books.service';
 import { BooksModule } from './books/books.module';
@@ -34,9 +34,9 @@ import { AuthorsModule } from './authors/authors.module';
       synchronize: false,      
     }),
     BooksModule,
-    AuthorsModule
+    AuthorsModule,
   ],
   controllers: [AppController],
-  providers: [AppService, BooksService, AuthorsService],
+  providers: [AppService],
 })
 export class AppModule {}

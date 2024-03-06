@@ -14,7 +14,7 @@ export default class CreateAuthorDto{
     name: string;
 
     @IsDate()
-    birthday: string;
+    birthday: Date;
 
     
 

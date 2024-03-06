@@ -14,7 +14,7 @@ class Author{
     birthday: Date;
 
     @OneToMany(()=> Book, (book)=> book.author)
-    book: Book[]
+    book: Book[];
 }
 
 export default Author;

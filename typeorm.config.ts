@@ -8,6 +8,6 @@ export const dataSource = new DataSource({
   password: '1234',
   database: 'libros',
   synchronize: false,
-  //entities: ['src/**/*.entity.ts'],
-  //migrations: ['./src/migrations/*.ts'],
+  entities: ['src/**/*.entity.ts'],
+  migrations: ['./src/migrations/*.ts'],
 });

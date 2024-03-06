@@ -14,11 +14,11 @@ class Book{
     published: Date;
 
     //enum acepta un rango de opciones que son predefinidos en book-enum.ts
-    @Column({type: 'enum', enum: GenresStatus, default: GenresStatus.ACTION})
-    genres: GenresStatus;
+    @Column({type: 'varchar', length: 44})
+    genres: string;
 
     @OneToMany(()=> Author, (author) => author.book)
-    author: Author[];
+    author: Author;
 }
 
 export default Book
